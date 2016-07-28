@@ -1,0 +1,25 @@
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class CodigodeNestor : MonoBehaviour {
+
+    public Image UIImagen;
+    
+
+    public void Start() {
+        UIImagen = GameObject.Find("Foto").GetComponent<Image>();
+    }
+
+    public void Update() {
+        if (Input.GetKeyDown("2")) {
+            UIImagen.sprite = Resources.Load<Sprite>("Sprites/imagenA");
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            UIImagen.sprite = Resources.Load<Sprite>("Sprites/imagenB");
+        }
+
+    }
+
+    }
